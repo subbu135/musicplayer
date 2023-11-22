@@ -1,0 +1,301 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background: green;
+    font-weight: bold;
+}
+    
+.player{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.wrapper{
+    border: 3px solid green;
+    padding: 33px;
+    border-radius: 31px;
+    background-color: greenyellow;
+}
+    
+.details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+    
+.track-art {
+    margin: 25px;
+    height: 250px;
+    width: 250px;
+    border: 5px solid darkmagenta;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    border-radius:190px;
+}
+    
+.now-playing {
+    font-size: 33px;
+    color: red;
+}
+    
+.track-name {
+    font-size: 51px;
+    color: deeppink;
+}
+    
+.track-artist {
+    margin-top: 5px;
+    font-size: 1.5rem;
+}
+    
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-left: 15px;
+    font-size: 31px;
+}
+.active{
+    color: black;
+}
+    
+.repeat-track,
+.random-track,
+.playpause-track,
+.prev-track,
+.next-track {
+    padding: 25px;
+    opacity: 0.7;
+    transition: opacity .2s;
+}
+    
+.repeat-track:hover,
+.random-track:hover,
+.playpause-track:hover,
+.prev-track:hover,
+.next-track:hover {
+    opacity: 1.0 ;
+}
+    
+.slider_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    
+.seek_slider, .volume_slider {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 5px;
+    background: darkmagenta;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+    
+.seek_slider::-webkit-slider-thumb,
+.volume_slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: pink;
+    border: 3px solid darkred;
+    cursor: grab;
+    border-radius: 100%;
+}
+    
+.seek_slider:hover,
+.volume_slider:hover {
+    opacity: 1.0;
+}
+    
+.seek_slider {
+    width: 60%;
+}
+    
+.volume_slider {
+    width: 30%;
+}
+    
+.current-time,
+.total-duration {
+    padding: 10px;
+}
+    
+i.fa-volume-down,
+i.fa-volume-up {
+    padding: 10px;
+}
+    
+i,
+i.fa-play-circle,
+i.fa-pause-circle,
+i.fa-step-forward,
+i.fa-step-backward,
+p {
+    cursor: pointer;
+}
+
+.randomActive{
+    color: black;
+}
+
+.rotate {
+    animation: rotation 35s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+.loader {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader .stroke{
+    background: deeppink;
+    height: 150%;
+    width: 10px;
+    border-radius: 50px;
+    margin: 0 5px;
+    animation: animate 1.3s linear infinite;
+}
+
+@keyframes animate {
+    50% {
+        height: 20%;
+        background: darkgreen;
+    }
+    
+    100% {
+        background: red;
+        height: 100%;
+    }
+}
+
+.stroke:nth-child(1){
+    animation-delay: 0s;
+}
+
+.stroke:nth-child(2){
+    animation-delay: 0.3s;
+}
+
+.stroke:nth-child(3){
+    animation-delay: 0.6s;
+}
+
+.stroke:nth-child(4){
+    animation-delay: 0.9s;
+}
+
+.stroke:nth-child(5){
+    animation-delay: 0.6s;
+}
+
+.stroke:nth-child(6){
+    animation-delay: 0.3s;
+}
+
+.stroke:nth-child(7){
+    animation-delay: 0s;
+}
+
+@media only screen and (max-width: 573px) {
+    body {
+        font-size: 16px;
+    }
+    
+    .now-playing {
+        font-size: 18px;
+    }
+    
+    .track-name {
+        font-size: 24px;
+    }
+    
+    .track-artist {
+        font-size: 1rem;
+    }
+    
+    .buttons {
+        font-size: 18px;
+    }
+
+    .wrapper {
+        padding: 15px;
+    }
+    
+    .track-art {
+        margin: 15px;
+    }
+    
+    .buttons {
+        margin-bottom: 15px;
+    }
+
+    .seek_slider {
+        width: 60%;
+    }
+    
+    .volume_slider {
+        width: 30%;
+    }
+
+    .loader {
+        height: 15px;
+    }
+
+    .buttons{
+        font-size: 19px;
+    }
+
+    .repeat-track,
+    .random-track,
+    .playpause-track,
+    .prev-track,
+    .next-track {
+        padding: 15px;
+        opacity: 0.5;
+        transition: opacity .2s;
+    }
+    @keyframes rotation {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(359deg);
+        }
+    }
+    
+    @keyframes animate {
+        50% {
+            height: 20%;
+            background: darkgreen;
+        }
+    
+        100% {
+            background: red;
+            height: 100%;
+        }
+    }
+        
+    
+    
+    
+}
